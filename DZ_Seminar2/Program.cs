@@ -28,7 +28,24 @@ else
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-
+int thirdDigit(int num)
+{
+    int n3 = (num % 10);
+    return n3;
+}
+Console.WriteLine("Хотите узнать какая цифра находится на третьей позиции в числе?");
+Console.Write("Введите трёхзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int gate = number / 100;
+   
+    if (gate <= 9 && gate >= 1)
+    {
+        Console.Write("Третьей цифрой в числе является = " + thirdDigit(number));
+    }
+    else
+    {
+        Console.Write("Третьей цифры нет!");
+    }
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
