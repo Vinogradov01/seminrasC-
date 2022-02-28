@@ -18,7 +18,7 @@ else
 {
     Console.Write("Второе число больше чем первое  ");  Console.Write(" max="); Console.Write(b); Console.Write(" min="); Console.Write(a); 
 }
-*/
+
 // Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
 Console.WriteLine("Давайте узнаем какое число больше");
@@ -41,3 +41,22 @@ if (number2 > max) max = number2;
 if (number3 > max) max = number3;
 Console.Write("Максимальное число = ");
 Console.WriteLine(max);
+*/
+
+// Задача 3: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+Console.WriteLine("Давайте узнаем является ли число чётным?");
+
+Console.Write("Введите целое число:");
+
+int number1 = Convert.ToInt32(Console.ReadLine());
+
+int result = number1 % 2;
+ if (result == 0)
+ {
+     Console.Write("Это число является чётным");
+ }
+ else
+ {
+     Console.Write("Это число является не чётным");
+ }
