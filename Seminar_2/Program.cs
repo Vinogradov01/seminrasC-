@@ -1,4 +1,6 @@
-﻿// See Задача 1 Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+﻿// Семинар 2 часть 1
+
+// See Задача 1 Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
 /*
 int FindMaxNum(int num)
 {
@@ -76,4 +78,97 @@ int check2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите целое число для проверки кратности первого числа :");
 int check3 = Convert.ToInt32(Console.ReadLine());
 Proverka(number1, check2, check3);
+
+
+//Семинар 2 часть 2
+
+// Задача Написать программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, 
+//в которой находится эта точка.
+
+int getQuart(double xPoint, double yPoint)
+{
+    if (xPoint > 0 && yPoint > 0) return 1;
+    if (xPoint < 0 && yPoint > 0) return 2;
+    if (xPoint < 0 && yPoint < 0) return 3;
+    if (xPoint > 0 && yPoint < 0) return 4;
+    return 0;
+}
+double x, y;
+int quartNum;
+Console.Write("Input X: ");
+x = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input Y: ");
+y = Convert.ToDouble(Console.ReadLine());
+quartNum = getQuart(x, y);
+if (quartNum == 0) Console.WriteLine("Нельзя однозначно определить четверть");
+else Console.WriteLine("Данная точка находится в  " + quartNum + "  четверти");
+
+
+//  Задача  Написать программу, которая принимает на вход номер четверти ивыводит на экран диапазон координат, доступных в этой четверти
+
+void quart(int num)
+{
+    switch (num) 
+    {
+        case 1:
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("В этой четверти координады Х и  координаты У будут положительными");
+            break;
+        }
+        case 2:
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("В этой четверти координаты Х будут отрицательными, а координаты У будут положительными");
+            break;
+        }
+        case 3:
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("В этой четверти координаты Х и координаты У будут отрицательные");
+            break;
+        }
+        case 4:
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("В этой четверти координаты Х будут положительные, а координаты У будут отрицательные");
+            break;
+        }
+        default:
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("Такой четверти не существует!");
+            break;
+        }
+    }    
+}
+
+Console.Write("Для того чтобы узнать с каким знаком будут координтаты в одной из чевертей введите четверть: ");
+int number = Convert.ToInt32(Console.ReadLine());
+quart(number);
+
+
+
+
+//  Задача Написать программу, которая на вход получает координаты точек Х и У  и выдаёт расстояние между точками.
+/*
+double getDistans(double x1, double y1, double x2, double y2)
+{
+    double xDistans = x1 - x2;
+    double yDistans = y1 - y2;
+
+    return Math.Sqrt(Math.Pow(xDistans, 2) + Math.Pow(yDistans, 2));
+}
+double xA, yA, xB, yB;
+double distans;
+Console.Write("Input X of point A: ");
+xA = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input Y of point A: ");
+yA = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input X of point B: ");
+xB = Convert.ToDouble(Console.ReadLine());
+Console.Write("Input Y of point B: ");
+yB = Convert.ToDouble(Console.ReadLine());
+distans = getDistans(xA, yA, xB, yB);
+Console.WriteLine(distans);
 */
