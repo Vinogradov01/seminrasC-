@@ -52,6 +52,7 @@ fibonacci(input);
 */
 // Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
 int[,] matrix = new int[3, 4];
+Console.WriteLine("Оригинальный массив: ");
 for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
@@ -61,3 +62,19 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     }
     Console.WriteLine();
 }
+Console.WriteLine();
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("Копия массива: ");
+void CopyArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+       for (int j = 0; j < array.GetLength(1); j++)
+       {
+           array[i, j] = matrix[i, j];
+           Console.Write(array[i, j] + " ");
+       } 
+    Console.WriteLine();
+    }
+}
+CopyArray(matrix);
