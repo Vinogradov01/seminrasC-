@@ -62,10 +62,10 @@ ViewElementOfPosition(strM, colN);
 
 
 int[,] array = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 } };
-var mean0Colum = 0.0;
-var mean1Colum = 0.0;
-var mean2Colum = 0.0;
-var mean3Colum = 0.0;
+decimal mean0Colum = 0;
+decimal mean1Colum = 0;
+decimal mean2Colum = 0;
+decimal mean3Colum = 0;
 for (int i = 0; i < 3; i++)
 {
     for (int j = 0; j < 4; j++)
@@ -95,8 +95,7 @@ for (int i = 0; i < 3; i++)
         }
     }
 }
-Console.WriteLine(Math.Round(mean0Colum / 3, 1));
-Console.WriteLine(Math.Round(mean1Colum / 3, 1));
-Console.WriteLine(Math.Round(mean2Colum / 3, 1));
-Console.WriteLine(Math.Round(mean3Colum / 3, 1));
-Console.WriteLine(Math.Round(4.49, 1));
+Console.WriteLine(Math.Round(((mean0Colum / 3)*10), MidpointRounding.ToNegativeInfinity)/10);
+Console.WriteLine(Math.Round(((mean1Colum / 3)*10), MidpointRounding.ToNegativeInfinity)/10);
+Console.WriteLine(Math.Round(((mean2Colum / 3)*10), MidpointRounding.ToNegativeInfinity)/10);
+Console.WriteLine(Math.Round(((mean3Colum / 3)*10), MidpointRounding.ToNegativeInfinity)/10);
