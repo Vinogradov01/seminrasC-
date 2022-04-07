@@ -11,9 +11,9 @@ void FillArrayRealNumbers(int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            array[i, j] = new Random().NextDouble() * 20 - 10;
-            array[i, j] = Math.Round(array[i, j], 1);
-            Console.Write(array[i, j] + " ");
+            array[i, j] = new Random().NextDouble() * 20 - 10;  //Math.Round(new Random().Next(-9, 10) + new Random().NextDouble(), 1);
+            array[i, j] = Math.Round(array[i, j], 1);  
+            Console.Write(array[i, j] + " ");  //Console.Write ("{0:0.#} ", вот так чтобы знаки убрать после ,
         }
         Console.WriteLine();
     }
