@@ -29,7 +29,7 @@ int[,] CreateFillArray(int[,] matrix)
     return matrix;
 }
 */
-/*
+
 void PrintArray(int[,] array)
 {
     Console.ForegroundColor = ConsoleColor.Green;
@@ -45,7 +45,7 @@ void PrintArray(int[,] array)
     }
     Console.ForegroundColor = ConsoleColor.White;
 }
-*/
+
 /*
 int[,] SortDescending(int[,] array)
 {
@@ -155,7 +155,7 @@ void PrintArray3D(int[,,] array3D)
 // 12 13 14 5
 // 11 16 15 6
 // 10 9 8 7
-/*
+
 int[,] Speral(int[,] body)
 {
     int n = body.GetLength(0);
@@ -184,21 +184,21 @@ int[,] Speral(int[,] body)
     if ((n % 2) != 0) body[n / 2, n / 2] = num;
     return body;
 }
-*/
+
 // Console.Write("Введите количество страниц в массиве: ");  // Задача 3
 // int page = Convert.ToInt32(Console.ReadLine());  //Задача 3
 // Console.Write("Введите количество строк в массиве: ");  // Задача 1 -- Задача 1 -- Задача 2 -- Задача 3
 // int row = Convert.ToInt32(Console.ReadLine());  // Задача 1 -- Задача 2 -- Задача 3
 // Console.Write("Введите количество столбцов в массиве: ");  // Задача 1 -- Задача 2 -- Задача 3
 // int column = Convert.ToInt32(Console.ReadLine());  // Задача 1 -- Задача 2 -- Задача 3
-// Console.Write("Введите число обозначающее количество строк и столбцов: ");  // Задача 4
-// int n = Convert.ToInt32(Console.ReadLine());  //Задача 4
+Console.Write("Введите число обозначающее количество строк и столбцов: ");  // Задача 4
+int n = Convert.ToInt32(Console.ReadLine());  //Задача 4
 // int[,] array = new int[row, column];  // Задача 1 -- Задача 2 -- Задача 3
 // int[,,] array3D = new int[page, row, column];  // Задача 3
-// int[,] array = new int[n, n];  //Задача 4
+int[,] array = new int[n, n];  //Задача 4
 // CreateFillArray(array);  // Задача 1 -- Задача 2 -- Задача 3
 // PrintArray(SortDescending(array));  // Задача 2
 // Console.WriteLine($"Номер строки с наименьшей суммой элементов: {MinimumAmountLine(array)}");  // Задача 2
 // CreateFillArray3D(array3D);  //Задача 3
 // PrintArray3D(array3D);  //Задача 3
-// PrintArray(Speral(array));  //Задача 4
+PrintArray(Speral(array));  //Задача 4
