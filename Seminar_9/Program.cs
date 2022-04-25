@@ -40,28 +40,28 @@ int[,] CreateTriangle(int size)
 }
 void PrintArray(int[,] array)
 {
-    int n = Console.WindowWidth/2;
+    int n = Console.WindowWidth / 2;
     string space = string.Empty;
     string[,] massStr = new string[array.GetLength(0), array.GetLength(1)];
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Изменённый массив");
     Console.WriteLine();
-    if (array.GetLength(0) % 2 != 0)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int i = 0; i < array.GetLength(0); i++)
+        Console.Write(space.PadLeft(n, ' '));
+        string resultRow = String.Empty;
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(space.PadLeft(n,' '));
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                massStr[i, j] = array[i, j].ToString();
-                if (massStr[i, j] == "0") massStr[i, j] = " ";
-                Console.Write($"{massStr[i, j]} ");
-            }
-            Console.WriteLine();
-            n = n-1;
+            massStr[i, j] = array[i, j].ToString();
+            if (massStr[i, j] == "0") massStr[i, j] = " ";
+            resultRow += $"{massStr[i, j]} ";
         }
-        Console.ForegroundColor = ConsoleColor.White;
+        Console.SetCursorPosition((Console.WindowWidth - resultRow.Length) / 2, Console.CursorTop);
+        Console.Write(resultRow);
+        Console.WriteLine();
+        n = n - 1;
     }
+    Console.ForegroundColor = ConsoleColor.White;
 }
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
